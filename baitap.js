@@ -26,7 +26,11 @@ console.log(output(array2));
 //Bài tạp sử dụng filter
 const output_type = arr => {
     newarr = arr.filter(function (item) {
-        return (item.type == "a");
+        if(item.type == "a") {
+            return `<li id=${item.id}>${item.name}</li>`;
+        }
+        console.log(typeof newarr);
+        // return (item.type == "a");
     });
     newarr = newarr.map((item) => {
         return `<li id=${item.id}>${item.name}</li>`;
