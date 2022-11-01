@@ -38,3 +38,4 @@ const output_type = arr => {
     return newarr;
 }
 console.log(output_type(array2));
+//day la ban moi
