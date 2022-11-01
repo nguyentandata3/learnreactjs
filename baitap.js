@@ -36,3 +36,12 @@ const output_type = (arr, type) => {
     return newarr;
 }
 console.log(output_type(array2, 'a'));
+
+//bai tap test
+const array3 = [1,2,3,4,5,6,7];
+const output2 = (arr) => {
+    return arr.map((item) => {
+        return (item + 2);
+    });
+}
+console.log(output2(array3));
