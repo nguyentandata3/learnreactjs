@@ -24,18 +24,15 @@ const output = arr2 => {
 console.log(output(array2));
 
 //Bài tạp sử dụng filter
-const output_type = arr => {
+const output_type = (arr, type) => {
     newarr = arr.filter(function (item) {
-        if(item.type == "a") {
+        if(type == item.type) {
             return `<li id=${item.id}>${item.name}</li>`;
         }
-        console.log(typeof newarr);
-        // return (item.type == "a");
     });
     newarr = newarr.map((item) => {
         return `<li id=${item.id}>${item.name}</li>`;
     });
     return newarr;
 }
-console.log(output_type(array2));
-//day la ban moi
+console.log(output_type(array2, 'a'));
