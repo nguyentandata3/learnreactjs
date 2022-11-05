@@ -30,11 +30,11 @@ const render = users => {
             <td>${u.id}</td>
             <td>
                 <span>${u.name}</span>
-                <input class='hidden' name='id' value='${u.name}'/>
+                <input class='hidden' name='name' value='${u.name}'/>
             </td>
             <td>
                 <span>${u.phone}</span>
-                <input class='hidden' name='id' value='${u.phone}'/>
+                <input class='hidden' name='phone' value='${u.phone}'/>
             </td>
         `
         rowEl.innerHTML = dataString
@@ -68,7 +68,14 @@ const render = users => {
                     const inputEls = rowEl.querySelectorAll('input')
                     const spanEls = rowEl.querySelectorAll('span')
                     spanEls.forEach(el => el.classList.toggle('hidden'))
-                    inputEls.forEach(el => el.classList.toggle('hidden'))
+                    inputEls.forEach(el => {
+                        el.classList.toggle('hidden');
+                        valueName = document.querySelector('input[name="name"]').value;
+                        valuePhone = document.querySelector('input[name=phone]').value;
+                    })
+                    spanEls[0].innerText = valueName;
+                    spanEls[1].innerText = valuePhone;
+                    console.log(spanEls);
                     editBtnEl.style.color = 'red'
                     editBtnEl.innerText = 'Edit'
                 }
