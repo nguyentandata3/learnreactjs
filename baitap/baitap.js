@@ -1,4 +1,3 @@
-
 const getdata = () => {
     return new Promise((reslove) => {
         setTimeout( () => {
