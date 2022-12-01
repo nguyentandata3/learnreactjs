@@ -36,3 +36,26 @@
     transform: rotate(360deg);
   }
 }
+* {
+  margin: 10px 0px;
+}
+
+.backgroundApp {
+  background: rgb(7, 35, 69);
+  color: white;
+}
+
+.backgrounditem {
+  background: white;
+  color: black;
+}
+
+.nhietdoO {
+  position: absolute;
+  top: -20px
+}
+.nhietdoC {
+  position: absolute;
+  top: -20px;
+  right:75px;
+}
